@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class App {
     static final int width = getTerminalWidth();
     static final int ballx = 8;
@@ -5,12 +7,22 @@ public class App {
     public static void main(String[] args) throws Exception {
         
         char[][] football= getfootball();
-        for (int y = 0; y < bally; y=y+1){
-            System.out.println();
-            for (int x = 0; x <ballx; x++){
-                System.out.print(football[y][x]);
+        Random rand = new Random();
+        while(true){
+            int num = rand.nextInt(width - 10);
+
+            for (int y = 0; y < bally; y=y+1){
+                System.out.println();
+                for(int i = 0; i < num; i++){
+                    System.out.print(" ");
+                }
+                for (int x = 0; x <ballx; x++){
+                    System.out.print(football[y][x]);
+                } 
+                
             }
-        }
+            Thread.sleep(200);
+    }
 
         
     }

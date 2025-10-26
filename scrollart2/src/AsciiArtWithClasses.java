@@ -1,5 +1,7 @@
 import java.util.Random;
 
+// Elephant by Yiannis, Ice Cream by Ishaan, Rocket by Rayden
+
 public class AsciiArtWithClasses {
     static final int width = getTerminalWidth();
     static final int ballx = 8;
